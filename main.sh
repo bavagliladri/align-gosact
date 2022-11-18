@@ -9,6 +9,7 @@ for LANG in $LANGS
 do
   if [ $LANG != "eng" ]
   then
+    echo "processing $LANG"
     # download language vectors
     lang_code=$(bash /home/luca/align-gosact/lang_code2lang_model.sh $LANG)
     bash /home/luca/align-gosact/download_language_model.sh "$lang_code"
