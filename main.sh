@@ -15,7 +15,11 @@ do
     # align language
     bash /home/luca/align-gosact/align_lang.sh $LANG
     # delete language vectors
-    rm /home/luca/word-vectors/cc."$lang_code".300.vec
-    rm /home/luca/word-vectors/cc."$lang_code".300.bin
+    missing=$(python3 /home/luca/align-gosact/check_alignment.py "$LANG")
+    if [ $missing == "False" ]
+    then
+      rm /home/luca/word-vectors/cc."$lang_code".300.vec
+      rm /home/luca/word-vectors/cc."$lang_code".300.bin
+    fi
   fi
 done
