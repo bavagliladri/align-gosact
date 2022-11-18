@@ -3,7 +3,7 @@
 SRC_LANG=$1
 TGT_LANG="eng"
 
-LANG_MODEL=$(lang_code2lang_model.sh "$1")
+LANG_MODEL=$(bash /home/luca/align_gosact/lang_code2lang_model.sh "$1")
 
 CHAPTER=$2
 

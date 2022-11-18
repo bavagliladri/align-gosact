@@ -10,7 +10,7 @@ do
   if [ $LANG != "eng" ]
   then
     # download language vectors
-    lang_code=$(bash lang_code2lang_model.sh $LANG)
+    lang_code=$(bash /home/luca/align-gosact/lang_code2lang_model.sh $LANG)
     bash /home/luca/align-gosact/download_language_model.sh "$lang_code"
     # align language
     bash /home/luca/align-gosact/align_lang.sh $LANG
