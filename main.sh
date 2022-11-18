@@ -15,7 +15,7 @@ do
     # align language
     bash /home/luca/align-gosact/align_lang.sh $LANG
     # delete language vectors
-    # rm /home/luca/word-vectors/cc."$lang_code".300.vec
-    # rm /home/luca/word-vectors/cc."$lang_code".300.bin
+    rm /home/luca/word-vectors/cc."$lang_code".300.vec
+    rm /home/luca/word-vectors/cc."$lang_code".300.bin
   fi
 done
